@@ -6,7 +6,7 @@ class CronJobLog(OriginalCronJobLog):
     Custom CronJobLog class that inherits from the base django_cron CronJobLog model.
     This class doesn't need to redefine indexes because the parent model already defines them.
     """
-    class Meta:
+    class my_meta:
         # This ensures that the table for this model uses the same name as the parent model table
         db_table = 'custom_cron_cronjoblog'
         app_label = 'custom_cron'
